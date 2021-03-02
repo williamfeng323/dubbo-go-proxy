@@ -7,6 +7,7 @@ require (
 	github.com/apache/dubbo-go-hessian2 v1.7.0
 	github.com/coreos/etcd v3.3.25+incompatible
 	github.com/dubbogo/dubbo-go-pixiu-filter v0.1.3
+	github.com/dubbogo/dubbo-go-proxy v0.2.0
 	github.com/dubbogo/go-zookeeper v1.0.2
 	github.com/emirpasic/gods v1.12.0
 	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32
@@ -22,5 +23,3 @@ require (
 )
 
 replace github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473 => github.com/envoyproxy/go-control-plane v0.8.0
-
-replace github.com/dubbogo/dubbo-go-proxy-filter v0.1.0-rc3.0.20210206105825-798f95b07dfa => /Users/william/Workspace/dubbo/williamfeng323/dubbo-go-proxy-filter
