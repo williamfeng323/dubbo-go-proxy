@@ -164,7 +164,7 @@ func (opt *valuesOpt) Action(target, val interface{}) error {
 			if _, ok = constant.JTypeMapper[trimType]; ok {
 				toTypes[i] = trimType
 			} else {
-				return errors.Errorf("Types invalid %v", trimType)
+				return errors.Errorf("Types invalid %s", trimType)
 			}
 			var err error
 			toVals[i], err = mapTypes(toTypes[i], toVals[i])
@@ -194,8 +194,11 @@ func (opt *paramTypesOpt) Action(target, val interface{}) error {
 	}
 	for i := range types {
 		trimType := strings.TrimSpace(types[i])
+		if len(trimType) == 0 {
+			continue
+		}
 		if _, ok = constant.JTypeMapper[trimType]; !ok {
-			return errors.Errorf("Types invalid %v", trimType)
+			return errors.Errorf("Types invalid %s", trimType)
 		}
 		types[i] = trimType
 	}
